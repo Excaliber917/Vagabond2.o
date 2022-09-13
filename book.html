@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/021e7ee46e.js" crossorigin="anonymous"></script>
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <title>Book Your Trip </title>
+    <script>
+        function cheak() {
+
+            if (document.getElementById('validationCustom01').value == "") {
+                alert("please enter your Name"); return false;
+            }
+            if (document.getElementById('validationCustom02').value == "") {
+                alert("please enter your Last Name"); return false;
+            }
+            if (document.getElementById('validationCustomUsername').value == "") {
+                alert("please enter your Email"); return false;
+            }
+            if (document.getElementById('validationCustom06').value == "") {
+                alert("please enter your Destination"); return false;
+            }
+            if (document.getElementById('validationCustom07').value == "") {
+                alert("please enter number of Passengers"); return false;
+            }
+            if (document.getElementById('validationCustom08').value == "") {
+                alert("please enter the check in Date"); return false;
+            }
+            if (document.getElementById('validationCustom09').value == "") {
+                alert("please enter the check out Date"); return false;
+            }
+            if (!(checkBox = document.getElementById('invalidCheck').checked)) {
+                // Respond to the result
+                alert("All the above inforamtions are true");
+                return false;
+            }
+
+
+        }
+        function getDates() {
+
+
+            var today = new Date();
+
+            var dd = today.getDate();
+            var mm = today.getMonth() + 1; //January is 0!
+            var yyyy = today.getFullYear();
+
+            if (dd < 10) {
+                dd = '0' + dd
+            }
+
+            if (mm < 10) {
+                mm = '0' + mm
+            }
+
+            // today = yyyy + '/' + mm + '/' + dd;
+            today = yyyy + '-' + mm + '-' + dd;
+
+            document.getElementById("validationCustom08").setAttribute("min", today);
+            document.getElementById('validationCustom08').value = today;
+
+
+        }
+       
+        function cheakoutdate()
+        {
+
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth() + 1; //January is 0!
+            var yyyy = today.getFullYear();
+            if (dd < 10) {
+                dd = '0' + dd
+            }
+            if (mm < 10) {
+                mm = '0' + mm
+            }
+            
+            today = yyyy + '-' + mm + '-' + dd;
+            document.getElementById("validationCustom09").setAttribute("min", today);
+        }
+
+
+        window.onload = function () {
+
+            getDates();
+           
+        };
+
+
+
+
+
+
+    </script>
+    <style>
+         .navbar-wrapper {
+            position: relative;
+        }
+
+
+
+        .navbar {
+            position: absolute;
+            top: 0;
+            z-index: 10;
+            background: rgb(0, 0, 0);
+            opacity: 0.85;
+            width: 100%;
+            position: sticky;
+            background: linear-gradient(45deg, red, #c800ff);
+        }
+
+        .nav-link.active {
+            border-bottom: 3px solid rgb(220, 208, 208);
+        }
+
+        .navbar-light .navbar-toggler {
+            color: #f546dd;
+            border-color: #d7ddee;
+        }
+
+        .navbar-light .navbar-toggler-icon {
+            filter: invert(1);
+        }
+
+    </style>
+
+</head>
+
+<body class=" bg-dark">
+
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <i class="fa-solid fa-plane-departure my-2 me-2"></i>
+            <a class="navbar-brand" href="/login/index.html">Vagabond</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/login/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login/gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/login/book.html">Book Trip</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="shadow-none p-3 mb-5 bg-light rounded mt-3">
+
+
+        <form class="row g-3 needs-validation" novalidate onsubmit="return cheak()">
+            <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">First name</label>
+                <input type="text" class="form-control" id="validationCustom01">
+                
+            </div>
+            <div class="col-md-4">
+                <label for="validationCustom02" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="validationCustom02">
+               
+            </div>
+            <div class="col-md-4">
+                <label for="validationCustomUsername" class="form-label">Email</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input type="email" class="form-control" id="validationCustomUsername"
+                        aria-describedby="inputGroupPrepend">
+                    
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="validationCustom03" class="form-label">Address,city</label>
+                <input type="text" class="form-control" id="validationCustom03">
+               
+            </div>
+            <div class="col-md-3">
+                <label for="validationCustom04" class="form-label">Kind of tour</label>
+                <select class="form-select" id="validationCustom04">
+                    <option selected>Open this select menu</option>
+                    <option value="1">Family</option>
+                    <option value="2">Friend</option>
+                    <option value="3">Couple</option>
+                </select>
+               
+            </div>
+            <div class="col-md-3">
+                <label for="validationCustom05" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="validationCustom05">
+               
+            </div>
+            <div class="col-md-3">
+                <label for="validationCustom06" class="form-label">your Destination</label>
+                <input type="text" class="form-control" id="validationCustom06">
+              
+            </div>
+            <div class="col-md-3">
+                <label for="validationCustom07" class="form-label">Total Passengers</label>
+                <input type="text" class="form-control" id="validationCustom07">
+                
+            </div>
+            <div class="col-md-3">
+                <label for="validationCustom08" class="form-label">Cheak in Date</label>
+                <input type="date" class="form-control" id="validationCustom08">
+                
+            </div>
+            <div class="col-md-3">
+                <label for="validationCustom08" class="form-label" >Cheak out Date</label>
+                <input type="date" class="form-control" id="validationCustom09" min='1899-01-01' max='2000-13-13' onclick="cheakoutdate()">
+               
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
+                    <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                    </label>
+
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit" id="submit1">Submit form</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container mt-3 px-4 py-5" id="icon-grid">
+        <h2 class="pb-2 border-bottom text-light">Reach Us</h2>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5 justify-content-between">
+            <div class="col d-flex align-items-start bg-light shadow-sm ">
+                <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+                <div>
+                    <h4 class="fw-bold mb-2 mt-2">Why Us</h4>
+                    <p class="fs-5">Reach us now for a 'tailor-made Coding diet plan' which breaks all trends of
+                        Requer,emt
+                        deprived classes. And this has been constantly proven to elevate your skills
+                        permanently.</p>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start bg-light shadow-sm ">
+                <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+                    <use xlink:href="#cpu-fill"></use>
+                </svg>
+                <div>
+                    <h4 class="fw-bold mb-2 mt-2">Address</h4>
+                    <p class="fs-6">Newtown, Kolkata - 700157<br>
+                        T : +91 8910790763<br>
+                        E : djghosh@yahoo.com</p>
+                </div>
+            </div>
+            <div class="col d-flex align-items-start bg-light shadow-sm ">
+                <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
+                    <use xlink:href="#home"></use>
+                </svg>
+                <div>
+                    <h4 class="fw-bold mb-2 mt-2">Follow Us</h4>
+                    <ul class="social list-inline d-flex  flex-row bd-highlight justify-content-between">
+                        <li class="mx-2"><a target="_blank" href="https://www.facebook.com/dhruba.ghosh.714"><i
+                                    class="fa fa-facebook fa-2x m-1" aria-hidden="true"></i></a></li>
+                        <li class="mx-2"><a target="_blank" href="https://twitter.com/imDhruba17" class="link-info"><i
+                                    class="fa fa-twitter fa-2x m-1" aria-hidden="true"></i></a></li>
+                        <li class="mx-2"><a target="_blank" href="https://www.instagram.com/dj_ghosh17/"
+                                class="link-dark"><i class="fa fa-instagram fa-2x m-1" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="shadow-lg p-3 mb-0 bg-body rounded">
+        <footer class="container">
+            <p class="float-end"><a href="#">Back to top</a></p>
+            <p>© 2000–2022 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        </footer>
+    </div>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+-->
+</body>
+
+</html>

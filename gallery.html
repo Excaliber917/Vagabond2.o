@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/021e7ee46e.js" crossorigin="anonymous"></script>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="lightbox.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap" rel="stylesheet">
+
+
+
+    <title>Vagabond Collections!</title>
+    <style>
+        /* .item
+        {
+            transition: .5s ease-in-out;
+        } */
+        body {
+            background-color: aliceblue;
+            /* filter: brightness(80%); */
+        }
+
+
+
+        .navbar-wrapper {
+            position: relative;
+        }
+
+
+
+        .navbar {
+            position: absolute;
+            top: 0;
+            z-index: 10;
+            background: rgb(0, 0, 0);
+            opacity: 0.85;
+            width: 100%;
+            position: sticky;
+            background: linear-gradient(45deg, red, #c800ff);
+        }
+
+        .nav-link.active {
+            border-bottom: 3px solid rgb(220, 208, 208);
+        }
+
+        .navbar-light .navbar-toggler {
+            color: #f546dd;
+            border-color: #d7ddee;
+        }
+
+        .navbar-light .navbar-toggler-icon {
+            filter: invert(1);
+        }
+
+
+        .item img {
+
+            transition: 1s;
+        }
+
+        .item img:hover {
+            filter: grayscale(0);
+            transform: scale(1.1);
+        }
+
+
+
+
+        .carousel-item img {
+            filter: brightness(50%);
+        }
+
+        @media(min-width:10px) and (max-width:767px) {
+            .carousel-item img {
+                filter: brightness(69%);
+            }
+
+        }
+
+        .carousel-caption h2 {
+            font-size: 3rem;
+        }
+
+        @media (min-width:0px) and (max-width:767px) {
+
+            .d-md-block {
+                display: block;
+
+            }
+
+            .d-md-block h2 {
+                display: block;
+                font-size: 1.5rem;
+
+            }
+
+            .d-md-block p {
+                display: none;
+
+            }
+
+            .d-md-block button {
+                display: none;
+
+            }
+        }
+
+
+
+        @media (max-width:425px) {
+            footer p {
+                font-size: 1rem;
+                margin-bottom: 0rem;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+
+        <div class="container-fluid">
+            <i class="fa-solid fa-plane-departure my-2 me-2 text-light"></i>
+            <a class="navbar-brand" href="/login/index.html"
+                style="font-family:'Rubik Distressed', cursive ; color: whitesmoke;">Vagabond</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0"">
+                <li class=" nav-item">
+                    <a class="nav-link  text-light" aria-current="page" href="/login/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light " href="/login/gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="/login/book.html">Book Trip</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex text-light">
+                    <a href="#" style="text-decoration: none;color:white">
+
+                        <i class="fa-brands fa-facebook fs-3 me-4"></i>
+                    </a>
+                    <a href="#" style="text-decoration: none;color:white">
+
+                        <i class="fa-brands fa-twitter fs-3 me-4"></i>
+                    </a>
+                    <a href="#" style="text-decoration: none;color:white">
+                        <i class="fa-brands fa-instagram fs-3 me-4"></i>
+                    </a>
+
+                    <a href="#" style="text-decoration: none;color:white">
+
+                        <i class="fa-brands fa-google-plus-g fs-3 me-4"></i>
+                    </a>
+
+                </form>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item" id="corousal">
+                <img src="caur5.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-md-block">
+                    <h2 style="font-family:'Rubik Distressed', cursive ;">Vagabond</h5>
+                        <p>It's time to start your adventure</p>
+                        <button class="btn btn-danger">Hotel</button>
+                        <button class="btn btn-primary">Places</button>
+                        <button class="btn btn-success">Reviews</button>
+                </div>
+            </div>
+            <div class="carousel-item" id="corousal">
+                <img src="caur2.jpg" class="d-block w-100" alt="..">
+                <div class="carousel-caption d-md-block">
+                    <h2 style="font-family:'Rubik Distressed', cursive;">Vagabond</h5>
+                        <p>It's time to start your adventure</p>
+                        <button class="btn btn-danger">Hotel</button>
+                        <button class="btn btn-primary">Places</button>
+                        <button class="btn btn-success">Reviews</button>
+                </div>
+
+            </div>
+            <div class="carousel-item active" id="corousal">
+                <img src="caur3.jpg" class="d-block w-100" alt="..">
+                <div class="carousel-caption d-md-block">
+                    <h2 style="font-family:'Rubik Distressed', cursive ;">Vagabond</h5>
+                        <p>It's time to start your adventure</p>
+                        <button class="btn btn-danger">Hotel</button>
+                        <button class="btn btn-primary">Places</button>
+                        <button class="btn btn-success">Reviews</button>
+                </div>
+
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row mt-4">
+            <div class="item col-sm-6 col-md-4 mb-3">
+
+                <a href="background1.jpg" data-lightbox="mygallery">
+
+                    <img src="background1.jpg" width="100%" height="100%" alt="">
+
+                </a>
+            </div>
+            <div class="item col-sm-6 col-md-4 mb-3">
+                <a href="background2.jpg" data-lightbox="mygallery">
+                    <img src="background2.jpg" width="100%" height="100%" alt="">
+                </a>
+            </div>
+            <div class="item col-sm-6 col-md-4 mb-3">
+                <a href="background3.jpg" data-lightbox="mygallery">
+                    <img src="background3.jpg" width="100%" height="100%" alt="">
+                </a>
+            </div>
+            <div class="item col-sm-6 col-md-4 mb-3">
+                <a href="background4.jpg" data-lightbox="mygallery">
+                    <img src="background4.jpg" width="100%" height="100%" alt="">
+                </a>
+            </div>
+            <div class="item col-sm-6 col-md-4 mb-3">
+                <a href="background5.jpg" data-lightbox="mygallery">
+                    <img src="background5.jpg" width="100%" height="100%" alt="">
+                </a>
+            </div>
+            <div class="item col-sm-6 col-md-4 mb-3">
+                <a href="background6.jpg" data-lightbox="mygallery">
+                    <img src="background6.jpg" width="100%" height="100%" alt="">
+                </a>
+            </div>
+            <div class="item col-sm-6 col-md-4 mb-3">
+                <a href="background7.jpg" data-lightbox="mygallery">
+                    <img src="background7.jpg" width="100%" height="100%" alt="">
+                </a>
+            </div>
+            <div class="item col-sm-6 col-md-4 mb-3">
+                <a href="background8.jpg" data-lightbox="mygallery">
+                    <img src="background8.jpg" width="100%" height="100%" alt="">
+                </a>
+            </div>
+            <div class="item col-sm-6 col-md-4 mb-3">
+                <a href="background9.jpg" data-lightbox="mygallery">
+                    <img src="background9.jpg" width="100%" height="100%" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="shadow-lg p-3 mb-0 bg-transparent rounded ">
+        <footer class="container fs-4 text-dark">
+            <p class="float-end"><a href="#">Back to top</a></p>
+            <p>© 2000–2022 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        </footer>
+    </div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        src = "https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+    </script>
+
+    <script src="lightbox-plus-jquery.min.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+-->
+</body>
+
+</html>
